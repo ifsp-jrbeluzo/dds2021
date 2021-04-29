@@ -7,7 +7,7 @@
         $c->nome = $_POST["nome"];
         $c->agencia = $_POST["agencia"];
         $c->numeroConta = $_POST["numeroConta"];
-        $c->operacao = $_POST["operacao"];
+        $c->tipo = $_POST["tipo"];
         //print_r($c);
         $_SESSION["contaBancaria"][] = $c;
 
@@ -38,8 +38,8 @@
             <input type="number" name="numeroConta" 
                 placeholder="Digite o número da nova conta..." /><br />
 
-            <select name="operacao">
-                <option label="Selecione a operação"></option>
+            <select name="tipo">
+                <option label="Selecione o tipo"></option>
                 <option value="cc">Conta Corrente</option>
                 <option value="cp">Conta Poupança</option>
             </select><br />

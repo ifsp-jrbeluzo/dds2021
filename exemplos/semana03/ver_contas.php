@@ -2,19 +2,17 @@
 include "classeContaBancaria.php";
 session_start();
 
+//print_r($_SESSION);
+//die();
 
-foreach($_SESSION["contaBancaria"] as $i=>$c){
-    $c->exibe_dados_conta();
+if(isset($_SESSION["contaBancaria"])){
+    foreach($_SESSION["contaBancaria"] as $i=>$c){
+        $c->exibe_dados_conta();
+    }
+   
 }
-
-
-foreach($_SESSION["contaBancaria"] as $i=>$c){
-    $c->depositar(100);
-}
-
-
-foreach($_SESSION["contaBancaria"] as $i=>$c){
-    $c->exibe_dados_conta();
+else{
+    echo "Ainda não há cadastros.";
 }
 
 ?>
