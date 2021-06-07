@@ -1,6 +1,6 @@
 <?php
 
-    abstract class Pessoa{
+     abstract class Pessoa{
         public $nome;
         public $email;
         public $cpf;
@@ -12,6 +12,13 @@
             $this->sexo = $valores["sexo"];
             $this->cpf = $valores["cpf"];
         }
+
+        public function exibir(){
+            echo "$this->nome ($this->cpf)<br />";
+            echo "Email: $this->email<br />";
+            echo "Sexo: $this->sexo<br />";  
+        }
+        
     }
 
 ?>

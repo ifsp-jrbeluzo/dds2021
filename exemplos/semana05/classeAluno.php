@@ -7,17 +7,15 @@
         public $curso;
 
 
-        public function __construct($valores){
-            parent::__construct($valores);
+        public function __construct($valores){            
             $this->prontuario = $valores["prontuario"];
             $this->curso = $valores["curso"];
+            parent::__construct($valores);
         }
 
         public function exibir_aluno(){
             echo "<h3>Aluno:</h3>";
-            echo "$this->nome ($this->cpf)<br />";
-            echo "Email: $this->email<br />";
-            echo "Sexo: $this->sexo<br />";           
+            $this->exibir();
             echo "Prontuário: $this->prontuario<br />";           
             echo "Curso: $this->curso<br />";           
         }

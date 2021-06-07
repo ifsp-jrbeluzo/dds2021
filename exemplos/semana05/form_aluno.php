@@ -1,9 +1,11 @@
 <?php
 
     if(!empty($_POST)){
-        session_start();
         include "classeAluno.php";
-        $a = new Aluno($_POST);       
+
+        session_start();
+        
+        $a = new Aluno($_POST); //instanciando um objeto da classe aluno. 
         $_SESSION["alunos"][] = $a;
     }
 
