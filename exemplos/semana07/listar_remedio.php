@@ -12,7 +12,7 @@ if($resultado->rowCount()>0){
     
     foreach($resultado as $i=>$t){
         $r = new Remedio($t);        
-        $r->exibir();
+        $r->exibir("comprar");
 
     }
 

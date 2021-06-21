@@ -11,7 +11,7 @@ class Remedio{
     public $validade;// data
     //public $tipo; //Gota, capsula ou comprimido
    
-    public function __construct($valores){
+    public function __construct($valores){        
         $this->id_remedio = $valores["id_remedio"];
         $this->nome = $valores["nome"];
         $this->preco = $valores["preco"];
@@ -19,12 +19,14 @@ class Remedio{
         $this->validade = $valores["validade"];
     }
 
-    public function exibir(){
+    public function exibir($tipo){
         echo "<b>Remédio: </b>$this->nome<br />";
         echo "<b>Preço: </b>$this->preco<br />";
         echo "<b>Bula: </b>$this->bula<br />";
         echo "<b>Validade: </b>$this->validade<br />";
-        echo "<a href='comprar_remedio.php?id_remedio=$this->id_remedio'>Comprar</a>";
+        if($tipo=="comprar"){
+            echo "<a href='comprar_remedio.php?id_remedio=$this->id_remedio'>Comprar</a>";
+        }
         echo "<hr />";
     }
 
