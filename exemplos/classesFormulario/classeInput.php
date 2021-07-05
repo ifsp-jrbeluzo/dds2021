@@ -1,8 +1,9 @@
 <?php
 
+    require_once "interfaceExibicao.php";
     require_once "classeEntrada.php";
 
-    class Input extends Entrada{
+    class Input extends Entrada implements Exibicao{
         public $type;
         public $step=null;
 
@@ -22,6 +23,9 @@
                          id='$this->id'";
             if($this->step!=null){
                 echo " step='$this->step'";
+            }  
+            if($this->value!=null){
+                echo " value='$this->value'";
             }     
 
             echo "placeholder='$this->placeholder'  /><br />";

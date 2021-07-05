@@ -1,8 +1,9 @@
 <?php
 
     require_once "classeEntrada.php";
+    require_once "interfaceExibicao.php";
 
-    class TextArea extends Entrada{
+    class TextArea extends Entrada implements Exibicao{
         public $cols;
         public $rows;
 

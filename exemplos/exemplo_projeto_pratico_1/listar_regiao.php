@@ -3,7 +3,7 @@
     include "conexao.php";
 
     $sql = "SELECT * FROM REGIAO ORDER BY NOME_REGIAO";
-    $resultado = $conexao->query($sql);
+    $resultado = $conexao->query($sql) or die(print_r($conexao));
 
 ?>
 
